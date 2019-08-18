@@ -4,7 +4,6 @@ import { Navbar, Nav, Card, Button, Jumbotron, Row } from 'react-bootstrap';
 import {Tabs, Tab} from 'react-bootstrap-tabs';
  
 import 'bootstrap/dist/css/bootstrap.min.css';
-import FormCheckLabel from 'react-bootstrap/FormCheckLabel';
 
 /*
 Outline: 
@@ -53,6 +52,11 @@ For internship or freelance inquiries, you can reach out to the email on my resu
 You can also reach out for references.
 */
 
+const resume_link = "https://1drv.ms/w/s!AuHCf7OLnxVrh4dXJI_CUc79i1ygXw"
+
+const contact_me = `For internship or freelance inquiries, you can reach out to the email on my resume. Adding me on LinkedIn works as well.
+You can also reach out for references.`
+
 
 const bio1 = `My name is Jordan Chernof. I am a sophomore at UC Berkeley studying Computer Science and minoring in Public Policy.`
 const bio2 = `I was born and raised in the Washington, DC area.`
@@ -60,10 +64,10 @@ const bio3 = `In high school, I was pretty sure I wanted to go to college for po
 So I decided to study computer science instead.`
 const bio4 = `In my first year of college, I accepted a number of freelance web design and development opportunities for local Berkeley startups and campus-affiliated organizations.
 I also spent some time doing web development for structured teams, such as being the Online Manager for the Daily Californian, our school newspaper, this past summer.`
-const lifework_bio = `In March, I spent a weekend hacking together a website for LifeWork, a startup helping Freelancers build a sustainable career. I and one teammate hacked our way to 2nd place in the LAUNCH Hackathon -- and a nice $500. Since then, I've helped LifeWork and am thrilled to see them win a $5000 grant and be accepted as a Berkeley SkyDeck accelerator team.`
-const consensys_bio = `This past summer, I focused on my software engineering internship at Consensys, a blockchain company that leads the Ethereum development community. I worked with an amazing team called Treum, which had something exciting to announce (albeit usually internally) just about eveyr single day. I met brilliant people and worked with positive personalities and role models, which was all I could have asked for.`
+const lifework_bio = `In March, I spent a weekend hacking together a website for LifeWork, a startup helping Freelancers build a sustainable career. I and one teammate hacked our way to 2nd place and $500 in the LAUNCH Hackathon. Since then, I've helped LifeWork and am thrilled to see them win a $5000 grant and be accepted as a Berkeley SkyDeck accelerator team.`
+const consensys_bio = `This past summer, I focused on my software engineering internship at Consensys, a blockchain company that leads the Ethereum development community. I worked with an amazing team called Treum, which had something exciting going on just about every single day. I met and worked with a constructive, highly focused, and inspiring team of blockchain developers.`
 const conclusion = `Each opportunity has been a phenomenal practical and mental learning experience for me. Whether it's picking up a new framework, learning how to get through DevOps nightmares, or simply dealing with time management while being a fulltime student, I am grateful each time for the opportunity to work hard and contribute to team success.`
-const lighthearted = `Of course, this is a career-focused website, so I may seem a little serious. But I'm not definitely not all work! I like to play basketball, go hiking, and make breakfast foods. Other times, I like to read and drink homemade tea. And my roommate and I make some very good coffee.`
+const lighthearted = `Of course, this is a career-focused website, so I may seem a little serious. But I'm not all work! I like to play basketball, go hiking, and make breakfast food.`
 
 const directions = `A few projects are public on my Github profile, but some of the interesting work I've done is private. I'm happy to speak more about those if you're interested.`
 
@@ -118,7 +122,7 @@ class AboutTab extends Component {
     let label = this.props.label;
     let text = this.props.text;
     return (
-      <Tab label={label} className="text-center my-4"><h2>{text}</h2></Tab>
+      <Tab label={label} className="text-center my-4"><h2 className="my-5">{text}</h2></Tab>
     );
   }
 }
@@ -128,7 +132,7 @@ class About extends Component {
 
   render () {
     return (
-      <Jumbotron className="bg-dark" id="about">
+      <Jumbotron className="bg-dark center mb-0" id="about">
         <h1 style={{color:"white"}}>About Me</h1>
       <div className="mx-3">
         <Tabs id="bio-tabs" className="my-3 px-5 bg-dark text-white" style={{ width: '100%' }}>
@@ -180,11 +184,12 @@ class Project extends Component {
   }
 }
 
+
 class Portfolio extends Component {
 
   render () {
     return (
-      <Jumbotron className="bg-light center" id="projects">
+      <Jumbotron className="bg-light center mb-0" id="projects">
         <h1 style={{color:"black"}}>Projects</h1>
       <div className="mx-3 my-4">
         <Row className="justify-content-md-center">
@@ -201,6 +206,20 @@ class Portfolio extends Component {
   }
 }
 
+class Contact extends Component {
+
+  render() {
+    return (
+      <Jumbotron className="bg-light center mb-0" id="contact">
+        <h1 style={{color:"black"}}>Contact</h1>
+        <div className="mx-3 my-4">
+          <h2>{contact_me}</h2>
+        </div>
+      </Jumbotron>
+    )
+  }
+}
+
 class MyNavbar extends Component {
 
   render() {
@@ -209,7 +228,7 @@ class MyNavbar extends Component {
         <Nav className="mr-auto">
           <Nav.Link href="#home">Home</Nav.Link>
           <Nav.Link href="#about">About</Nav.Link>
-          <Nav.Link href="#resume">Resume</Nav.Link>
+          <Nav.Link href={resume_link}>Resume</Nav.Link>
           <Nav.Link href="#projects">Projects</Nav.Link>
           <Nav.Link href="#contact">Contact</Nav.Link>
         </Nav>
@@ -225,6 +244,7 @@ function App() {
       <MyNavbar/>
       <About/>
       <Portfolio/>
+      <Contact/>
       {/*
       <Contact>
       </Contact>
