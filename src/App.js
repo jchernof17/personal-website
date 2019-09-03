@@ -52,7 +52,7 @@ For internship or freelance inquiries, you can reach out to the email on my resu
 You can also reach out for references.
 */
 
-const resume_link = "https://1drv.ms/w/s!AuHCf7OLnxVrh4dXJI_CUc79i1ygXw"
+const resume_link = "https://1drv.ms/w/s!AuHCf7OLnxVrh4duuQ3FvhLUntLw7w"
 
 const contact_me = `For internship or freelance inquiries, you can reach out to the email on my resume. Adding me on LinkedIn works as well.
 You can also reach out for references.`
@@ -210,10 +210,10 @@ class Contact extends Component {
 
   render() {
     return (
-      <Jumbotron className="bg-light center mb-0" id="contact">
-        <h1 style={{color:"black"}}>Contact</h1>
+      <Jumbotron className="bg-dark center mb-0" id="contact">
+        <h1 style={{color:"white"}}>Contact</h1>
         <div className="mx-3 my-4">
-          <h2>{contact_me}</h2>
+          <h2 style={{color:"white"}}>{contact_me}</h2>
         </div>
       </Jumbotron>
     )
