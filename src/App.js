@@ -53,7 +53,8 @@ You can also reach out for references.
 */
 
 const resume_link = "https://1drv.ms/w/s!AuHCf7OLnxVrh4duuQ3FvhLUntLw7w"
-
+const github_link = "https://github.com/jchernof17"
+const linkedin_link = "https://www.linkedin.com/in/jordan-chernof-086607173/"
 const contact_me = `For internship or freelance inquiries, you can reach out to the email on my resume. Adding me on LinkedIn works as well.
 You can also reach out for references.`
 
@@ -113,6 +114,15 @@ const MerkleProofCard = {
   text: 'Still in development, check back soon.',
   code_link: 'https://github.com/jchernof17/merkle-proof-verifier-app',
   project_link: 'https://github.com/jchernof17/merkle-proof-verifier-app',
+  image: ''
+}
+
+const MYOPCard = {
+  title: 'Bode Plot Calculator',
+  subtitle: 'Uses iPython, LaTeX, and circuit analysis techniques',
+  text: 'Interactive iPython demonstration that guides students through using the phasor domain for analysis of intermediate-level circuit design. Won extra credit award for EE16B course.',
+  code_link: 'https://github.com/jchernof17/py-bode-plotter/',
+  project_link: 'https://github.com/jchernof17/py-bode-plotter/',
   image: ''
 }
 
@@ -198,6 +208,7 @@ class Portfolio extends Component {
         <Project body={FlasketballCard}/>
         <Project body={HackathonCard}/>
         <Project body={FortniteCard}/>
+        <Project body={MYOPCard}/>
         <Project body={MerkleProofCard}/>
         </Row>
       </div>
@@ -231,6 +242,8 @@ class MyNavbar extends Component {
           <Nav.Link href={resume_link}>Resume</Nav.Link>
           <Nav.Link href="#projects">Projects</Nav.Link>
           <Nav.Link href="#contact">Contact</Nav.Link>
+          <Nav.Link href={github_link}>Github</Nav.Link>
+          <Nav.Link href={linkedin_link}>LinkedIn</Nav.Link>
         </Nav>
       </Navbar>
     )
