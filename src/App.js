@@ -81,6 +81,15 @@ const EthSmartContractCard = {
   image: ''
 }
 
+const IIJSiteCard = {
+  title: 'Jewelry Startup Ecommerce Site',
+  subtitle: 'Uses DigitalOcean VPS with customized WordPress backend',
+  text: 'Ecommerce store for a Los Angeles-based jewelry startup. Fully-managed DigitalOcean droplet (VPS) running Wordpress Woocommerce with browser and server caching. Implemented Push, Render, Pre-cache, Lazy-Load (PRPL) practices.',
+  code_link: '#',
+  project_link: 'https://www.isabellaislesjewelry.com',
+  image: '',
+}
+
 const HackathonCard = {
   title: 'LifeWork Hackathon Website MVP',
   subtitle: 'Uses Node.js, Express, bootstrap',
@@ -203,8 +212,9 @@ class Portfolio extends Component {
         <h1 style={{color:"black"}}>Projects</h1>
       <div className="mx-3 my-4">
         <Row className="justify-content-md-center">
-        
+      
         <Project body={EthSmartContractCard}/>
+        <Project body={IIJSiteCard}/>
         <Project body={FlasketballCard}/>
         <Project body={HackathonCard}/>
         <Project body={FortniteCard}/>
