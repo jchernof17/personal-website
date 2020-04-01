@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Navbar, Nav, Card, Button, Jumbotron, Row } from 'react-bootstrap';
 import {Tabs, Tab} from 'react-bootstrap-tabs';
- 
+import ReactGA from 'react-ga'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 /*
@@ -51,6 +51,15 @@ Contact section:
 For internship or freelance inquiries, you can reach out to the email on my resume. Adding me on LinkedIn works as well.
 You can also reach out for references.
 */
+
+/* initialize GA */
+function initializeReactGA() {
+	ReactGA.initialize('UA-149256621-1');
+	ReactGA.pageview('/homepage');
+}
+
+
+
 
 const resume_link = "https://1drv.ms/w/s!AuHCf7OLnxVrh4duuQ3FvhLUntLw7w"
 const github_link = "https://github.com/jchernof17"
