@@ -4,16 +4,14 @@
   "private": true,
   "homepage": "https://jordanchernof.me",
   "dependencies": {
-    "aws": "0.0.3-2",
-    "aws-cli": "0.0.2",
-    "bootstrap": "^4.3.1",
-    "gh-pages": "^2.1.1",
-    "react": "^16.9.0",
-    "react-bootstrap": "^1.0.0-beta.11",
+    "bootstrap": "^4.4.1",
+    "gh-pages": "^2.2.0",
+    "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
     "react-bootstrap-tabs": "^1.0.2",
-    "react-dom": "^16.9.0",
-    "react-ga": "^2.7.0",
-    "react-scripts": "3.1.1"
+    "react-dom": "^16.12.0",
+    "react-scripts": "3.1.1",
+    "react-ga": "^2.7.0"
   },
   "scripts": {
     "start": "react-scripts start",
