@@ -100,6 +100,24 @@ const IIJSiteCard = {
   image: '',
 }
 
+const HNCard = {
+  title: 'Virtual Sproul',
+  subtitle: 'Uses React Hooks on the frontend, small Flask API/backend',
+  text: 'Hack:now Hackathon project (April \'20) that helps clubs pass out digital flyers to college students',
+  code_link: 'https://github.com/jchernof17/virtual-sproul',
+  project_link: '#',
+  image: '',
+}
+
+const Proj_170 = {
+  title: 'Horizon Wireless',
+  subtitle: 'Uses Networkx and joblib on Google Cloud Platform servers',
+  text: 'Underlying code fueling project for UC Berkeley CS-170: Algorithms class. Scored in top 1/8th of class.'
+  code_link: 'https://github.com/jchernof17/zoomin',
+  project_link: '#',
+  image: '',
+}
+
 const HackathonCard = {
   title: 'LifeWork Hackathon Website MVP',
   subtitle: 'Uses Node.js, Express, bootstrap',
@@ -222,7 +240,8 @@ class Portfolio extends Component {
         <h1 style={{color:"black"}}>Projects</h1>
       <div className="mx-3 my-4">
         <Row className="justify-content-md-center">
-      
+        <Project body={HNCard}/>
+        <Project body={Proj_170}/>
         <Project body={EthSmartContractCard}/>
         <Project body={IIJSiteCard}/>
         <Project body={FlasketballCard}/>
