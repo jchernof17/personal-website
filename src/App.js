@@ -112,7 +112,7 @@ const HNCard = {
 const Proj_170 = {
   title: 'Horizon Wireless',
   subtitle: 'Uses Networkx and joblib on Google Cloud Platform servers',
-  text: 'Underlying code fueling project for UC Berkeley CS-170: Algorithms class. Scored in top 1/8th of class.'
+  text: 'Underlying code fueling project for UC Berkeley CS-170: Algorithms class. Scored in top 1/8th of class.',
   code_link: 'https://github.com/jchernof17/zoomin',
   project_link: '#',
   image: '',
