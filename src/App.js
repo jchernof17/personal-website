@@ -4,6 +4,7 @@ import { Navbar, Nav, Card, Button, Jumbotron, Row } from 'react-bootstrap';
 import {Tabs, Tab} from 'react-bootstrap-tabs';
 import ReactGA from 'react-ga'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { FRSCard, HNCard, Proj_170, EthSmartContractCard, IIJSiteCard, FlasketballCard, HackathonCard, FortniteCard, MYOPCard, MerkleProofCard } from './Cards';
 
 /*
 Outline: 
@@ -82,86 +83,10 @@ const lighthearted = `Of course, this is a career-focused website, so I may seem
 
 const directions = `A few projects are public on my Github profile, but some of the interesting work I've done is private. I'm happy to speak more about those if you're interested.`
 
-const EthSmartContractCard = {
-  title: 'Ethereum Smart Contract Finder',
-  subtitle: 'Uses Python, web3.py',
-  text: 'Command-line interface that accepts the address of an Ethereum Smart Contract and returns the hash of the block and transaction wherein the contract was deployed.',
-  code_link: 'https://github.com/jchernof17/eth-contract-finder',
-  project_link: 'https://github.com/jchernof17/eth-contract-finder',
-  image: ''
-}
 
-const IIJSiteCard = {
-  title: 'Jewelry Startup Ecommerce Site',
-  subtitle: 'Uses DigitalOcean VPS with customized WordPress backend',
-  text: 'Ecommerce store for a Los Angeles-based jewelry startup. Fully-managed DigitalOcean droplet (VPS) running Wordpress Woocommerce with browser and server caching. Implemented Push, Render, Pre-cache, Lazy-Load (PRPL) practices.',
-  code_link: '#',
-  project_link: 'https://www.isabellaislesjewelry.com',
-  image: '',
-}
 
-const HNCard = {
-  title: 'Virtual Sproul',
-  subtitle: 'Uses React Hooks on the frontend, small Flask API/backend',
-  text: 'Hack:now Hackathon project (April \'20) that helps clubs pass out digital flyers to college students',
-  code_link: 'https://github.com/jchernof17/virtual-sproul',
-  project_link: '#',
-  image: '',
-}
-
-const Proj_170 = {
-  title: 'Horizon Wireless',
-  subtitle: 'Uses Networkx and joblib on Google Cloud Platform servers',
-  text: 'Underlying code fueling project for UC Berkeley CS-170: Algorithms class. Scored in top 1/8th of class.',
-  code_link: 'https://github.com/jchernof17/zoomin',
-  project_link: '#',
-  image: '',
-}
-
-const HackathonCard = {
-  title: 'LifeWork Hackathon Website MVP',
-  subtitle: 'Uses Node.js, Express, bootstrap',
-  text: 'Website MVP built in the two-day LAUNCH Hackathon. Awarded 2nd prize and $500 in competition.',
-  code_link: 'https://github.com/jchernof17/lifework',
-  project_link: 'https://github.com/jchernof17/lifework',
-  image: ''
-}
-
-const FlasketballCard = {
-  title: 'Flasketball: Basketball stats in Flask',
-  subtitle: 'Uses Flask, with 0 lines of CSS :)',
-  text: 'My introduction to Flask last winter. A simple app with login/logout that allows users to search for basketball stats.',
-  code_link: 'https://github.com/jchernof17/flask-basketball-scraper',
-  project_link: 'https://github.com/jchernof17/flask-basketball-scraper',
-  image: ''
-}
-
-const FortniteCard = {
-  title: 'Fortnite Stats',
-  subtitle: 'Uses Linux, Apache, MySQL, and PHP (LAMP stack)',
-  text: 'My first full-stack web app. A crowd-sourced Fornite tournament tracker that allows fans to score Fortnite Friday tournaments, checking the accuracy of fan-entered data. Pitched to investors and sponsors.',
-  code_link: 'https://github.com/jchernof17/fortnite-tournament-tracker',
-  project_link: 'https://github.com/jchernof17/fortnite-tournament-tracker',
-  image: ''
-}
-
-const MerkleProofCard = {
-  title: 'Merkle Proof Verifier App',
-  subtitle: 'Uses React, supported by a Flask backend',
-  text: 'Still in development, check back soon.',
-  code_link: 'https://github.com/jchernof17/merkle-proof-verifier-app',
-  project_link: 'https://github.com/jchernof17/merkle-proof-verifier-app',
-  image: ''
-}
-
-const MYOPCard = {
-  title: 'Bode Plot Calculator',
-  subtitle: 'Uses iPython, LaTeX, and circuit analysis techniques',
-  text: 'Interactive iPython demonstration that guides students through using the phasor domain for analysis of intermediate-level circuit design. Won extra credit award for EE16B course.',
-  code_link: 'https://github.com/jchernof17/py-bode-plotter/',
-  project_link: 'https://github.com/jchernof17/py-bode-plotter/',
-  image: ''
-}
+const allCards = [FRSCard, HNCard, Proj_170, EthSmartContractCard, IIJSiteCard, FlasketballCard, HackathonCard, FortniteCard, MYOPCard, MerkleProofCard]
+//
 
 class AboutTab extends Component {
   
@@ -231,7 +156,7 @@ class Project extends Component {
   }
 }
 
-
+const projects = allCards.map(card => <Project body={card}/>);
 class Portfolio extends Component {
 
   render () {
@@ -240,15 +165,7 @@ class Portfolio extends Component {
         <h1 style={{color:"black"}}>Projects</h1>
       <div className="mx-3 my-4">
         <Row className="justify-content-md-center">
-        <Project body={HNCard}/>
-        <Project body={Proj_170}/>
-        <Project body={EthSmartContractCard}/>
-        <Project body={IIJSiteCard}/>
-        <Project body={FlasketballCard}/>
-        <Project body={HackathonCard}/>
-        <Project body={FortniteCard}/>
-        <Project body={MYOPCard}/>
-        <Project body={MerkleProofCard}/>
+        {projects}
         </Row>
       </div>
       </Jumbotron>
@@ -297,11 +214,6 @@ function App() {
       <About/>
       <Portfolio/>
       <Contact/>
-      {/*
-      <Contact>
-      </Contact>
-      <Footer>
-      </Footer> */}
     </div>
   );
 }
