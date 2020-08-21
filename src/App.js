@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Navbar, Nav, Card, Button, Jumbotron, Row } from 'react-bootstrap';
-import {Tabs, Tab} from 'react-bootstrap-tabs';
-import ReactGA from 'react-ga'; 
+import { Navbar, Nav, Card, Button as b, Jumbotron, Row as r } from 'react-bootstrap';
+import { Menu, Header, Container, Button, Icon, GridRow as Row, Grid, Card as NewCard, Image, Tab } from 'semantic-ui-react';
+import { Tabs, Tab as OldTab } from 'react-bootstrap-tabs';
+import ReactGA from 'react-ga';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FRSCard, HNCard, Proj_170, EthSmartContractCard, IIJSiteCard, FlasketballCard, HackathonCard, FortniteCard, MYOPCard, MerkleProofCard } from './Cards';
 
@@ -55,8 +56,8 @@ You can also reach out for references.
 
 /* initialize GA */
 function initializeReactGA() {
-	ReactGA.initialize('UA-149256621-1');
-	ReactGA.pageview('/homepage');
+  ReactGA.initialize('UA-149256621-1');
+  ReactGA.pageview('/homepage');
 }
 initializeReactGA()
 
@@ -86,40 +87,70 @@ const directions = `A few projects are public on my Github profile, but some of 
 
 
 const allCards = [FRSCard, HNCard, Proj_170, EthSmartContractCard, IIJSiteCard, FlasketballCard, HackathonCard, FortniteCard, MYOPCard, MerkleProofCard]
-//
 
 class AboutTab extends Component {
-  
+
   render() {
     let label = this.props.label;
     let text = this.props.text;
     return (
-      <Tab label={label} className="text-center my-4"><h2 className="my-5">{text}</h2></Tab>
+      <Tab.Pane>{text}</Tab.Pane>
     );
   }
 }
 
-
+let objectToPane = (object) => {
+  return {
+    menuItem: object.label,
+    render: () => <Tab.Pane attached={false}>{object.description}</Tab.Pane>
+  };
+}
+const paneObjects = [
+  {
+    label: "About Me",
+    description: bio1,
+  },
+  {
+    label: "Where I'm From",
+    description: bio2,
+  },
+  {
+    label: "In High School",
+    description: bio3,
+  },
+  {
+    label: "In College...",
+    description: bio4,
+  },
+  {
+    label: "Work with LifeWork",
+    description: lifework_bio,
+  },
+  {
+    label: "Internship with ConsenSys",
+    description: consensys_bio,
+  },
+  {
+    label: "Conclusion",
+    description: conclusion,
+  },
+  {
+    label: "Disclaimer",
+    description: lighthearted,
+  },
+  {
+    label: "Directions",
+    description: directions,
+  },
+]
 class About extends Component {
-
-  render () {
+  render() {
     return (
-      <Jumbotron className="bg-dark center mb-0" id="about">
-        <h1 style={{color:"white"}}>About Me</h1>
-      <div className="mx-3">
-        <Tabs id="bio-tabs" className="my-3 px-5 bg-dark text-white" style={{ width: '100%' }}>
-          <AboutTab label="About Me" text={bio1}/>
-          <AboutTab label="Where I'm From" text={bio2}/>
-          <AboutTab label="In High School" text={bio3}/>
-          <AboutTab label="In College..." text={bio4}/>
-          <AboutTab label="Work with LifeWork" text={lifework_bio}/>
-          <AboutTab label="Internship with ConsenSys" text={consensys_bio}/>
-          <AboutTab label="Conclusion" text={conclusion}/>
-          <AboutTab label="Disclaimer" text={lighthearted}/>
-          <AboutTab label="Directions" text={directions}/>
-        </Tabs>
-      </div>
-      </Jumbotron>
+      <Row width='10'>
+        <h1 style={{ color: "white" }}>About Me</h1>
+        <Tab menu={{ fluid: true, vertical: true, tabular: true }} panes={paneObjects.map(object => objectToPane(object))} id="bio-tabs" className="" style={{ width: '100%', marginTop: "40px", marginBottom: "40px" }}>
+        </Tab>
+      </Row>
     )
   }
 }
@@ -128,47 +159,47 @@ class Project extends Component {
 
   render() {
     let body = this.props.body;
+    let cardHeight = "310px";
 
     return (
-    <Card style={{width: '18rem'}} className="sm-6 md-4 lg-3 mx-2 my-4" id="project">
-          <Card.Img variant="top" src={body.image} />
-          <Card.Body>
-            <Card.Title>
-              <strong>{body.title}</strong>
-            </Card.Title>
-            <Card.Subtitle className="mb-4">
-              <em>{body.subtitle}</em>
-            </Card.Subtitle>
-            <Card.Text className="text-left mb-4">
-              {body.text}
-            </Card.Text>
-            <div id="project-button" className="my-2">
-            <Button className="mx-1" id="" variant="info" href={body.code_link}>
+      <NewCard width='4' style={{ minHeight: cardHeight, maxHeight: cardHeight }} className="grow">
+        <NewCard.Content>
+          <Image src={body.image} />
+          <NewCard.Header>
+            {body.title}
+          </NewCard.Header>
+          <NewCard.Meta>
+            {body.subtitle}
+          </NewCard.Meta>
+          <NewCard.Description textAlign='left'>
+            {body.text}
+          </NewCard.Description>
+        </NewCard.Content>
+        <NewCard.Content extra>
+          {/* <div className='ui two buttons'> */}
+          <Button color='teal' href={body.code_link}>
             View Code
             </Button>
-            <Button className="mx-1" id="" variant="info" href={body.project_link}>
+          <Button color='teal' href={body.project_link}>
             View Project
             </Button>
-            </div>
-          </Card.Body>
-        </Card>
+          {/* </div> */}
+        </NewCard.Content>
+      </NewCard>
     )
   }
 }
 
-const projects = allCards.map(card => <Project body={card}/>);
-class Portfolio extends Component {
+const projects = allCards.map(card => <Project body={card} />);
 
-  render () {
+class Portfolio extends Component {
+  render() {
     return (
-      <Jumbotron className="bg-light center mb-0" id="projects">
-        <h1 style={{color:"black"}}>Projects</h1>
-      <div className="mx-3 my-4">
-        <Row className="justify-content-md-center">
-        {projects}
-        </Row>
-      </div>
-      </Jumbotron>
+      <Row width='10' id="projects" centered>
+        <NewCard.Group centered>
+          {projects}
+        </NewCard.Group>
+      </Row>
     )
   }
 }
@@ -177,12 +208,12 @@ class Contact extends Component {
 
   render() {
     return (
-      <Jumbotron className="bg-dark center mb-0" id="contact">
-        <h1 style={{color:"white"}}>Contact</h1>
-        <div className="mx-3 my-4">
-          <h2 style={{color:"white"}}>{contact_me}</h2>
+      <Grid id="contact" style={{ "marginTop": "20px" }}>
+        <h1 style={{ color: "black" }}>Contact</h1>
+        <div>
+          <h2 style={{ color: "blue" }}>{contact_me}</h2>
         </div>
-      </Jumbotron>
+      </Grid>
     )
   }
 }
@@ -191,17 +222,15 @@ class MyNavbar extends Component {
 
   render() {
     return (
-      <Navbar bg="light" variant="light">
-        <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#about">About</Nav.Link>
-          <Nav.Link href={resume_link}>Resume</Nav.Link>
-          <Nav.Link href="#projects">Projects</Nav.Link>
-          <Nav.Link href="#contact">Contact</Nav.Link>
-          <Nav.Link href={github_link}>Github</Nav.Link>
-          <Nav.Link href={linkedin_link}>LinkedIn</Nav.Link>
-        </Nav>
-      </Navbar>
+      <Menu bg="light" variant="light">
+        <Menu.Item color='pink' href="#home">Home</Menu.Item>
+        <Menu.Item href="#about">About</Menu.Item>
+        <Menu.Item href={resume_link}>Resume</Menu.Item>
+        <Menu.Item href="#projects">Projects</Menu.Item>
+        <Menu.Item href="#contact">Contact</Menu.Item>
+        <Menu.Item href={github_link}>Github</Menu.Item>
+        <Menu.Item href={linkedin_link}>LinkedIn</Menu.Item>
+      </Menu>
     )
   }
 }
@@ -210,10 +239,13 @@ class MyNavbar extends Component {
 function App() {
   return (
     <div className="App">
-      <MyNavbar/>
-      <About/>
-      <Portfolio/>
-      <Contact/>
+      <MyNavbar />
+      <Container divided='vertically'>
+        <About />
+        <Portfolio />
+        <Contact />
+      </Container>
+
     </div>
   );
 }
