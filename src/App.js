@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Navbar, Nav, Card, Button, Jumbotron, Row } from 'react-bootstrap';
-import {Tabs, Tab} from 'react-bootstrap-tabs';
+// import {Tabs, Tab} from 'react-bootstrap-tabs';
 import ReactGA from 'react-ga'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FRSCard, HNCard, Proj_170, EthSmartContractCard, IIJSiteCard, FlasketballCard, HackathonCard, FortniteCard, MYOPCard, MerkleProofCard } from './Cards';
-
+import { Tab } from 'semantic-ui-react'
 /*
 Outline: 
 
@@ -99,6 +99,24 @@ class AboutTab extends Component {
   }
 }
 
+const tabs = [
+	{ label: "About Me", text: bio1 },
+	{ label: "Where I'm From", text: bio2 },
+	{ label: "In High School", text: bio3 },
+	{ label: "In College", text: bio4 },
+	{ label: "Work with LifeWork", text: lifework_bio },
+	{ label: "Internship with ConsenSys", text: consensys_bio },
+	{ label: "Conclusion", text: conclusion },
+	{ label: "Disclaimer", text: lighthearted },
+	{ label: "Directions", text: directions },
+];
+
+const panes = tabs.map(tab =>  {
+  return {
+  menuItem: tab.label, 
+  render: () => <Tab.Pane>{tab.text}</Tab.Pane>
+  };
+});
 
 class About extends Component {
 
@@ -107,17 +125,7 @@ class About extends Component {
       <Jumbotron className="bg-dark center mb-0" id="about">
         <h1 style={{color:"white"}}>About Me</h1>
       <div className="mx-3">
-        <Tabs id="bio-tabs" className="my-3 px-5 bg-dark text-white" style={{ width: '100%' }}>
-          <AboutTab label="About Me" text={bio1}/>
-          <AboutTab label="Where I'm From" text={bio2}/>
-          <AboutTab label="In High School" text={bio3}/>
-          <AboutTab label="In College..." text={bio4}/>
-          <AboutTab label="Work with LifeWork" text={lifework_bio}/>
-          <AboutTab label="Internship with ConsenSys" text={consensys_bio}/>
-          <AboutTab label="Conclusion" text={conclusion}/>
-          <AboutTab label="Disclaimer" text={lighthearted}/>
-          <AboutTab label="Directions" text={directions}/>
-        </Tabs>
+        <Tab panes={panes}/>
       </div>
       </Jumbotron>
     )
