@@ -38,7 +38,7 @@ function initializeReactGA() {
 }
 initializeReactGA();
 
-const resume_link = "https://1drv.ms/b/s!AuHCf7OLnxVrirguD8zgeqRUdg9Y9g";
+const resume_link = "https://1drv.ms/w/s!AuHCf7OLnxVrirgpDDakQwWKJt-KWw?e=Xud8em";
 const github_link = "https://github.com/jchernof17";
 const linkedin_link = "https://www.linkedin.com/in/jordan-chernof";
 const contact_me = `For internship or freelance inquiries, you can reach out to the email on my resume. Adding me on LinkedIn works as well.`;
