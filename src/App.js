@@ -168,30 +168,25 @@ class NewAbout extends Component {
 class Project extends Component {
 	render() {
 		let body = this.props.body;
-		let cardHeight = "310px";
+		let cardHeight = "640px";
 
 		return (
 			<NewCard
 				width="4"
 				style={{ minHeight: cardHeight, maxHeight: cardHeight }}
-				className="content-box"
+				className="content-box grow"
 			>
 				<NewCard.Content>
-					<Image src={body.image} />
-					<NewCard.Header>
-						{body.title}
-					</NewCard.Header>
-					<NewCard.Meta>
-						{body.subtitle}
-					</NewCard.Meta>
-					<NewCard.Description
-						textAlign="left"
-					>
-						{body.text}
-					</NewCard.Description>
+					<Image src={"/projects/" + body.image + ".png"} href={body.code_link}/>
+					<div className="card-body" style={{ "border": "0px" }}>
+						<NewCard.Header as="h2">{body.title}</NewCard.Header>
+						<NewCard.Meta>{body.subtitle}</NewCard.Meta>
+						<NewCard.Description textAlign="left">
+							{body.text}
+						</NewCard.Description>
+					</div>
 				</NewCard.Content>
-				<NewCard.Content extra
-				style={{ "text-align": "center" }}>
+				<NewCard.Content extra style={{ "text-align": "center" }}>
 					{/* <div className='ui two buttons'> */}
 					<Button color="teal" href={body.code_link}>
 						View Code
@@ -212,6 +207,7 @@ class Portfolio extends Component {
 	render() {
 		return (
 			<Row width="10" id="projects" centered>
+				<Header as="h1">Projects</Header>
 				<NewCard.Group centered>{projects}</NewCard.Group>
 			</Row>
 		);
@@ -223,15 +219,15 @@ class Contact extends Component {
 		return (
 			<Grid id="contact" style={{ marginTop: "80px" }}>
 				<Row>
-					<Header as="h2" style={{ color: "black" }}>
+					<Header as="h1" style={{ color: "black" }}>
 						Contact
 					</Header>
 				{/* </Row> */}
-				<div style={{ textAlign: "center" }}>
+				<div>
         <br></br><br></br>
-					<p style={{ color: "black" }}>
+					<Header as="h4" style={{ color: "black" }}>
 						{contact_me}
-					</p>
+					</Header>
 				</div>
         </Row>
 			</Grid>

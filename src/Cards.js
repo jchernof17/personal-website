@@ -4,7 +4,7 @@ export const EthSmartContractCard = {
     text: 'Command-line interface that accepts the address of an Ethereum Smart Contract and returns the hash of the block and transaction wherein the contract was deployed.',
     code_link: 'https://github.com/jchernof17/eth-contract-finder',
     project_link: 'https://github.com/jchernof17/eth-contract-finder',
-    image: ''
+    image: 'tte'
 }
 
 export const IIJSiteCard = {
@@ -13,7 +13,7 @@ export const IIJSiteCard = {
     text: 'Ecommerce store for a Los Angeles-based jewelry startup. Fully-managed DigitalOcean droplet (VPS) running Wordpress Woocommerce with browser and server caching. Implemented Push, Render, Pre-cache, Lazy-Load (PRPL) practices.',
     code_link: '#',
     project_link: 'https://www.isabellaislesjewelry.com',
-    image: '',
+    image: 'iij',
 }
 
 export const HNCard = {
@@ -22,7 +22,7 @@ export const HNCard = {
     text: 'Hack:now Hackathon project built in April 2020 that helps clubs pass out digital flyers to college students.',
     code_link: 'https://github.com/jchernof17/virtual-sproul',
     project_link: '#',
-    image: '',
+    image: 'vs',
 }
 
 export const FRSCard = {
@@ -31,17 +31,19 @@ export const FRSCard = {
     text: 'Open-source starter code for building a secure web application with Flask and React. Beginning developers can clone the repo to instantly have a login/logout web app and build an API and frontend from there.',
     code_link: 'https://github.com/jchernof17/flask-react-starter',
     project_link: '#',
-    image: '',
+    image: 'wash',
 }
 
 export const Proj_170 = {
-    title: 'Horizon Wireless',
-    subtitle: 'Uses Networkx and joblib on Google Cloud Platform servers',
-    text: 'Underlying code fueling project for UC Berkeley CS-170: Algorithms class. Scored in top 1/8th of class.',
-    code_link: 'https://github.com/jchernof17/zoomin',
-    project_link: '#',
-    image: '',
-}
+	title: "Horizon Wireless",
+	subtitle: "Uses Networkx and joblib on Google Cloud Platform servers",
+	text:
+		"Underlying code fueling project for UC Berkeley CS-170: Algorithms class. Scored in top 1/8th of class.",
+	code_link: "https://github.com/jchernof17/zoomin",
+	project_link: "#",
+	image:
+		"hw",
+};
 
 export const HackathonCard = {
     title: 'LifeWork Hackathon Website MVP',
@@ -49,16 +51,16 @@ export const HackathonCard = {
     text: 'Website MVP built in the two-day LAUNCH Hackathon. Awarded 2nd prize and $500 in competition.',
     code_link: 'https://github.com/jchernof17/lifework',
     project_link: 'https://github.com/jchernof17/lifework',
-    image: ''
+    image: 'lw'
 }
 
 export const FlasketballCard = {
-    title: 'Flasketball: Basketball stats in Flask',
+    title: 'Flasketball',
     subtitle: 'Uses Flask, with 0 lines of CSS :)',
     text: 'My introduction to Flask last winter. A simple app with login/logout that allows users to search for basketball stats.',
     code_link: 'https://github.com/jchernof17/flask-basketball-scraper',
     project_link: 'https://github.com/jchernof17/flask-basketball-scraper',
-    image: ''
+    image: 'flasketball'
 }
 
 export const FortniteCard = {
@@ -67,7 +69,7 @@ export const FortniteCard = {
     text: 'My first full-stack web app. A crowd-sourced Fornite tournament tracker that allows fans to score Fortnite Friday tournaments, checking the accuracy of fan-entered data. Pitched to investors and sponsors.',
     code_link: 'https://github.com/jchernof17/fortnite-tournament-tracker',
     project_link: 'https://github.com/jchernof17/fortnite-tournament-tracker',
-    image: ''
+    image: 'fs'
 }
 
 export const MerkleProofCard = {
@@ -76,7 +78,7 @@ export const MerkleProofCard = {
     text: 'Still in development, check back soon.',
     code_link: 'https://github.com/jchernof17/merkle-proof-verifier-app',
     project_link: 'https://github.com/jchernof17/merkle-proof-verifier-app',
-    image: ''
+    image: 'mpv'
 }
 
 export const MYOPCard = {
@@ -85,5 +87,5 @@ export const MYOPCard = {
     text: 'Interactive iPython demonstration that guides students through using the phasor domain for analysis of intermediate-level circuit design. Won extra credit award for EE16B course.',
     code_link: 'https://github.com/jchernof17/py-bode-plotter/',
     project_link: 'https://github.com/jchernof17/py-bode-plotter/',
-    image: ''
+    image: 'bpc'
 }
