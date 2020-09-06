@@ -1,5 +1,5 @@
 export const EthSmartContractCard = {
-    title: 'Ethereum Smart Contract Finder',
+    title: 'There\'s The ETH',
     subtitle: 'Uses Python, web3.py',
     text: 'Command-line interface that accepts the address of an Ethereum Smart Contract and returns the hash of the block and transaction wherein the contract was deployed.',
     code_link: 'https://github.com/jchernof17/eth-contract-finder',
@@ -8,7 +8,7 @@ export const EthSmartContractCard = {
 }
 
 export const IIJSiteCard = {
-    title: 'Jewelry Startup Ecommerce Site',
+    title: 'Jewelry Startup',
     subtitle: 'Uses DigitalOcean VPS with customized WordPress backend',
     text: 'Ecommerce store for a Los Angeles-based jewelry startup. Fully-managed DigitalOcean droplet (VPS) running Wordpress Woocommerce with browser and server caching. Implemented Push, Render, Pre-cache, Lazy-Load (PRPL) practices.',
     code_link: '#',
@@ -26,7 +26,7 @@ export const HNCard = {
 }
 
 export const FRSCard = {
-    title: 'Flask-React Login Starter',
+    title: 'WASH: Web Apps Start Here',
     subtitle: 'Uses React Hooks and Flask',
     text: 'Open-source starter code for building a secure web application with Flask and React. Beginning developers can clone the repo to instantly have a login/logout web app and build an API and frontend from there.',
     code_link: 'https://github.com/jchernof17/flask-react-starter',
@@ -73,7 +73,7 @@ export const FortniteCard = {
 }
 
 export const MerkleProofCard = {
-    title: 'Merkle Proof Verifier App',
+    title: 'Merkle Proof Verifier',
     subtitle: 'Uses React, supported by a Flask backend',
     text: 'Still in development, check back soon.',
     code_link: 'https://github.com/jchernof17/merkle-proof-verifier-app',
