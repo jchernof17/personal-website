@@ -7,6 +7,15 @@ export const EthSmartContractCard = {
     image: 'tte'
 }
 
+export const ThisWebsite = {
+    title: 'This Website',
+    subtitle: 'React, Semantic UI',
+    text: 'Website-ception?',
+    code_link: 'https://github.com/jchernof17/personal-website',
+    project_link: 'https://www.jordanchernof.me',
+    image: 'pw'
+}
+
 export const IIJSiteCard = {
     title: 'Jewelry Startup',
     subtitle: 'Uses DigitalOcean VPS with customized WordPress backend',
