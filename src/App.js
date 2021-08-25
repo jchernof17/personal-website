@@ -27,6 +27,7 @@ import {
 	FortniteCard,
 	MYOPCard,
 	MerkleProofCard,
+	ThisWebsite,
 } from "./Cards";
 
 const isDarkMode = false;
@@ -60,13 +61,14 @@ const contact_me = `For internship or freelance inquiries, you can reach out to 
 
 // `;
 
-const bio1 = `My name is Jordan Chernof. I am a junior at UC Berkeley studying Computer Science and minoring in Public Policy.`;
+const bio1 = `My name is Jordan Chernof. I am a former Microsoft and Tesla intern and a senior at UC Berkeley studying Computer Science and minoring in Public Policy.`;
 const bio2 = `I was born and raised in Maryland.`;
-const bio3 = `My passion is using technology to help people achieve their goals.`;
+const bio3 = `I am interested in using software to help design real-world things like buildings and cities.`;
 // const bio4 = `I am a freelance developer in college, having designed webapps for several startups, nonprofits, and campus-affiliated organizations.`;
+const tesla_bio = `This past Spring, I spent the semester as a Software Engineering Intern at Tesla, where I designed a load balaning portal for product teams to view and test new features before rollout.`
 const consensys_bio = `Previously, I interned at the blockchain company ConsenSys, researching and designing Ethereum smart contracts on the Treum team.`;
 const microsoft_bio =
-	"I most recently interned at Microsoft, where I built a recommendation engine for Power BI. I used LP/Optimization principles to inform my work.";
+	"I've spent two summers as a Software Engineering Intern at Microsoft, working on Power BI. Some of my work ";
 // const hackathons = `I have completed three hackathons, wherein I built a startup MVP, a React club-matching app, and a clothing-design marketplace.`;
 const conclusion = `On campus, I help teach Public Policy 198 (Policy Review @ Berkeley), work with my freelance clients, and play IM basketball.`;
 const lighthearted = `Of course, this is a career-focused website, so I may seem a little serious. But I'm not all work! I like to read, go hiking, and make breakfast food.`;
@@ -76,6 +78,7 @@ const allCards = [
 	FRSCard,
 	HNCard,
 	Proj_170,
+	ThisWebsite,
 	EthSmartContractCard,
 	IIJSiteCard,
 	FlasketballCard,
@@ -113,8 +116,12 @@ const paneObjects = [
 		description: bio3,
 	},
 	{
-		label: "Internship with Microsoft",
+		label: "Internships with Microsoft",
 		description: microsoft_bio,
+	},
+	{
+		label: "Internship with Tesla",
+		description: tesla_bio,
 	},
 	{
 		label: "Internship with ConsenSys",
