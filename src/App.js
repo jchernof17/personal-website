@@ -61,16 +61,16 @@ const contact_me = `For internship or freelance inquiries, you can reach out to 
 
 // `;
 
-const bio1 = `My name is Jordan Chernof. I am a former Microsoft and Tesla intern and a senior at UC Berkeley studying Computer Science and minoring in Public Policy.`;
-const bio2 = `I was born and raised in Maryland.`;
+const bio1 = `My name is Jordan Chernof. I recently graduated from UC Berkeley and now am a Software Engineer for Microsoft Azure IoT.`;
+const bio2 = `I was born and raised in Maryland, and I moved to California for college. Now I live in Seattle, Washington.`;
 const bio3 = `I am interested in using software to help design real-world things like buildings and cities.`;
 // const bio4 = `I am a freelance developer in college, having designed webapps for several startups, nonprofits, and campus-affiliated organizations.`;
-const tesla_bio = `This past Spring, I spent the semester as a Software Engineering Intern at Tesla, where I designed a load balaning portal for product teams to view and test new features before rollout.`
+const tesla_bio = `In Spring, 2021, I spent the semester as a Software Engineering Intern at Tesla, where I designed a load balaning portal for product teams to view and test new features before rollout.`
 const consensys_bio = `Previously, I interned at the blockchain company ConsenSys, researching and designing Ethereum smart contracts on the Treum team.`;
 const microsoft_bio =
 	"I've spent two summers as a Software Engineering Intern at Microsoft, working on Power BI. Some of my work included designing a recommendation engine and building a key new product integration.";
 // const hackathons = `I have completed three hackathons, wherein I built a startup MVP, a React club-matching app, and a clothing-design marketplace.`;
-const conclusion = `On campus, I help teach Public Policy 198 (Policy Review @ Berkeley), work with my freelance clients, and play IM basketball.`;
+const conclusion = `On campus, I helped teach Public Policy 198 (Policy Review @ Berkeley), worked with my freelance clients, and played IM basketball.`;
 const lighthearted = `Of course, this is a career-focused website, so I may seem a little serious. But I'm not all work! I like to read, go hiking, and make breakfast food.`;
 const directions = `A few projects are public on my Github profile, but some of the interesting work I've done is private. I'm happy to speak more about those if you're interested.`;
 
